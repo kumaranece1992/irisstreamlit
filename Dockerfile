@@ -1,14 +1,7 @@
-FROM python:3.6
-
-WORKDIR /streamlit
-
-COPY requirements.txt ./
-COPY iris-ml-app.py ./
-
-RUN pip install -r requirements.txt
-
-EXPOSE 8501
-
-ENTRYPOINT ["streamlit", "run"]
-
-CMD ["/streamlit/iris-ml-app.py"]
+FROM python:3.7
+EXPOSE 8080
+WORKDIR /app
+COPY requirements.txt ./requirements.txt
+RUN pip3 install -r requirements.txt
+COPY . .
+CMD streamlit run iris-ml-app.py --server.port 8080
