@@ -24,7 +24,7 @@ def user_input_feats():
 
 df = user_input_feats()
 
-st.subheader('User Input parameterss')
+st.subheader('User Input parameter')
 st.write(df)
 
 iris = datasets.load_iris()
