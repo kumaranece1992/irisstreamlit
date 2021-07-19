@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
 # Iris Flower Prediction App
-This app predicts the **Iris flower type!**
+This app predicts the **Iris flower type demo!**
 """)
 #st.markdown("<span style=“background-color:#121922”>",unsafe_allow_html=True)
 st.sidebar.header('User Input Parameters')
@@ -13,7 +13,7 @@ st.sidebar.header('User Input Parameters')
 def user_input_feats():
     sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
     sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
-    petal_length = st.sidebar.slider('Petal length', 2.0, 6.9, 1.3)
+    petal_length = st.sidebar.slider('Petal length', 1.3, 6.9, 1.3)
     petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
     data = {'sepal_length': sepal_length,
             'sepal_width': sepal_width,
@@ -24,7 +24,7 @@ def user_input_feats():
 
 df = user_input_feats()
 
-st.subheader('User Input parameter')
+st.subheader('User Input parameters')
 st.write(df)
 
 iris = datasets.load_iris()
