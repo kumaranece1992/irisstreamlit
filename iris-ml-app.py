@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
 # Iris Flower Prediction App
-This app predicts the **Iris flower type demo!**
+This app predicts the **Iris flower type **
 """)
 #st.markdown("<span style=“background-color:#121922”>",unsafe_allow_html=True)
 st.sidebar.header('User Input Parameters')
